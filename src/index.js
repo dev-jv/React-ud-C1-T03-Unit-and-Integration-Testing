@@ -14,7 +14,6 @@ import CounterApp from './CounterApp';
 import ReactDOM from 'react-dom'
 import './index.css';
 
-
 const divRoot = document.querySelector('#app');
 
 ReactDOM.render(<CounterApp value = {1} />, divRoot);
