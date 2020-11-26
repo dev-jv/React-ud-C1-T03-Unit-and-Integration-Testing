@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PrimeraApp from './PrimeraApp';
 
-const saludo = <h1>Wiii</h1>
+import './index.css';
 
 const divRoot = document.querySelector('#app');
 
-ReactDOM.render( saludo, divRoot);
+ReactDOM.render( <PrimeraApp />, divRoot);
 
 
 
