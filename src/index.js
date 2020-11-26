@@ -6,7 +6,7 @@ import './index.css';
 
 const divRoot = document.querySelector('#app');
 
-ReactDOM.render( <PrimeraApp />, divRoot);
+ReactDOM.render( <PrimeraApp color = "Teal" />, divRoot);
 
 
 
