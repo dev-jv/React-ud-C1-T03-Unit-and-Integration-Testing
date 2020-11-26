@@ -1,38 +1,18 @@
-// ----------------------------- <> ...
-// import React from 'react';
-
-// const PrimeraApp = () => {
-//     return (
-//         <div>
-//             <h1>Wi</h1>
-//             <p>My first App</p>  
-//         </div>
-//     );
-// }
-
-// export default PrimeraApp;
-
-// ----------------------------- <> with
-// import React, { Fragment } from 'react';
-
-// const PrimeraApp = () => {
-//     return (
-//         <Fragment>
-//             <h1>Wi</h1>
-//             <p>My first App</p>  
-//         </Fragment>
-//     );
-// }
-
-// export default PrimeraApp;
-
-// ----------------------------- <> without
 import React from 'react';
 
 const PrimeraApp = () => {
+
+    // const hope = {
+    //     nombre: 'dee',
+    //     edad: 2,
+    // };
+
+    const hope = 'Wi';
+
     return (
-        <>
-            <h1>Wi</h1>
+        <>  
+            <h1> { hope } </h1>
+            {/* <pre>{JSON.stringify(hope, null, 3)}</pre> */}
             <p>My first App</p>  
         </>
     );
