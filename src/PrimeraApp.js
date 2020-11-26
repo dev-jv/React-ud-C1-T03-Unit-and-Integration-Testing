@@ -1,6 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const PrimeraApp = ({ color = "Blue" }) => {
+const PrimeraApp = ({ color }) => {
+
+    // if ( !color ) {
+    //     throw new Error( 'El color no existe!' )
+    // }
 
     return (
         <>  
@@ -9,6 +14,10 @@ const PrimeraApp = ({ color = "Blue" }) => {
             <p>My first App</p>  
         </>
     );
+}
+
+PrimeraApp.propTypes = {
+    color : PropTypes.string.isRequired,
 }
 
 export default PrimeraApp;
