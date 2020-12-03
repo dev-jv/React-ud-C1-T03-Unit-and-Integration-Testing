@@ -9,32 +9,32 @@
 // console.log(saludar);
 
 // ------
-const saludar = function(x) {
-    return `Hola ${x}`;
-}
-console.log(saludar('Sam'));
+// const saludar = function(x) {
+//     return `Hola ${x}`;
+// }
+// console.log(saludar('Sam'));
 
 // ------
-const saludar2 = (x) => `Hola ${x}`;
-console.log(saludar2('Dean'));
+// const saludar2 = (x) => `Hola ${x}`;
+// console.log(saludar2('Dean'));
 
 // ------
-const getUser = () => ({ // ({..})
+export const getUser = () => ({ // ({..})
     uid: 'Drak01',
     password: 'Godzi01'
 });
 
-const user = getUser();
-console.log(user);
+// const user = getUser();
+// console.log(user);
 
 // ------ 
-const getUsuarioActivo = nombre => ({
+export const getUsuarioActivo = nombre => ({
         uid: 'ABC567',
         username: nombre,
 });
 
-const usuarioActivo = getUsuarioActivo('Castiel');
-console.log(usuarioActivo);
+// const usuarioActivo = getUsuarioActivo('Castiel');
+// console.log(usuarioActivo);
 
 
 

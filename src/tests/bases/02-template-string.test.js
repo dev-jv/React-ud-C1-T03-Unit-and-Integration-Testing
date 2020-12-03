@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom'
-
 import { getSaludo } from '../../bases/02-template-string.js'
 
 describe('Pruebas en 02-template-string.js', () => {

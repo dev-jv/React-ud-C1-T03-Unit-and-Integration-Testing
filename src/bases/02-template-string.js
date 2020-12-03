@@ -1,19 +1,19 @@
 // --------------------------- <> Template String > Bactick/Back Quote
 
-const nombre = 'Harry';
-const apellido = 'Potter';
+// const nombre = 'Harry';
+// const apellido = 'Potter';
 
-const nS = nombre + ' ' + apellido;
+// const nS = nombre + ' ' + apellido;
 // console.log(nS);
 
-const nC = `${nombre} ${apellido}`;
+// const nC = `${nombre} ${apellido}`;
 // console.log(nC);
 
-const nombreCompleto = `
-${nombre} 
-${apellido} 
-${1+1}`
-;
+// const nombreCompleto = `
+// ${nombre} 
+// ${apellido} 
+// ${1+1}`
+// ;
 // console.log(nombreCompleto);
 
 export function getSaludo(ka = 'Nero') {
