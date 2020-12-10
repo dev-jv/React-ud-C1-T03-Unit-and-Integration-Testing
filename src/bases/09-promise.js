@@ -1,4 +1,4 @@
-import { heroes } from './data/heroes'
+import { heroes } from '../data/heroes'
 
 const getHeroeById = (id) => {
     return heroes.find(heroe => heroe.id === id);
@@ -72,22 +72,22 @@ const getHeroeById = (id) => {
 // getHeroeByIdAsync(2).then(res => console.log(`Nuestro heroe es ${ res.name }`))
 
  // <> ----------------------------------------------------- .then .catch
-const getHeroeByIdAsync = (x) => {
+export const getHeroeByIdAsync = (x) => {
     return new Promise( (resolve, reject) => {
         setTimeout( () => {
             const heroe = getHeroeById(x);   
             if(heroe) {
                 resolve(heroe)
             } else {
-                reject('Ocurrió un error')
+                reject('No se pudo encontrar el héroe!!!')
             }
         }, 2000)
     })
 }
 
-getHeroeByIdAsync(1)
-    .then(console.log)
-    .catch(console.warn)
+    // getHeroeByIdAsync(1)
+    //     .then(console.log)
+    //     .catch(console.warn)
 
 
 
