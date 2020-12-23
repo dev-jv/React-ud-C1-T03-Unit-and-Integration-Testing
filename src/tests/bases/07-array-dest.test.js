@@ -1,6 +1,5 @@
 import { retornarArreglo } from '../../bases/07-array-dest'
 
-
 describe('Pruebas en 07-array-dest.js', () => {
     test('Debe retornar un string y un número', () => {
 
@@ -17,7 +16,7 @@ describe('Pruebas en 07-array-dest.js', () => {
         expect( numeros ).toBe( 123 );
         expect( typeof numeros ).toBe( 'number' );
     })
-})
+});
 
 
 

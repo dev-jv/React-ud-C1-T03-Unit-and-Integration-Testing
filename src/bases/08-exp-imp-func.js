@@ -2,7 +2,6 @@
 
 import heroes, { owners } from '../data/heroes'
 
-
 // const [ , , , k, ,] = heroes; 
 
 // console.log( k );

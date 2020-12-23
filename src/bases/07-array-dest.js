@@ -16,7 +16,7 @@
 
 export const retornarArreglo = () => {
     return ['ABC', 123];
-}
+};
 
 // const [ p, q ] = retornarArreglo();
 // console.log( p, q )

@@ -6,22 +6,22 @@ describe('Pruebas en 05-functions.js', () => {
         const userTest = {
             uid: 'Drak01',
             password: 'Godzi01'
-        }
-        const user = getUser()
+        };
+        const user = getUser();
         console.log(user);
         expect(user).toEqual(userTest);
-    })
+    });
 
     test('Test 2: getUsuarioActivo debe retornar un objeto, con un parámetro como elemento ', () => {
         const n = 'Deei0';
         const usNameTest = {
             uid: 'ABC567',
             username: n,
-        }
+        };
         const usName = getUsuarioActivo(n);
         expect(usName).toEqual(usNameTest);
     })
-})
+});
 
 
 

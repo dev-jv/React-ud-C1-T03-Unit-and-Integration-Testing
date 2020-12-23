@@ -9,15 +9,15 @@ const PrimeraApp = ({ color = 'Yellow', especie }) => {
             <p> { especie } </p>
         </>
     );
-}
+};
 
 PrimeraApp.propTypes = { 
     color : PropTypes.string.isRequired,
-}
+};
 
 PrimeraApp.defaultProps = {
     especie: 'Kaede',
-}
+};
 
 export default PrimeraApp;
 

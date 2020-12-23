@@ -133,7 +133,7 @@ const usContext = ( {nombre, clave, edad, estado ='Inactivo'} ) => {
             lng: -12.32 
         } 
     } 
-} 
+};
 
 const {estad, nombreClave, anios, latlng:{lat, lng}} = usContext( persona );
 // const {nombreClave, anios} = hunter;

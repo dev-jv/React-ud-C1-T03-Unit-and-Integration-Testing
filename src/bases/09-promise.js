@@ -2,7 +2,7 @@ import { heroes } from '../data/heroes'
 
 const getHeroeById = (id) => {
     return heroes.find(heroe => heroe.id === id);
-}
+};
 
 // <> -------------------------------------------------- Promise .then
 // const promesa = new Promise( (resolve, reject) => {
@@ -83,7 +83,7 @@ export const getHeroeByIdAsync = (x) => {
             }
         }, 2000)
     })
-}
+};
 
     // getHeroeByIdAsync(1)
     //     .then(console.log)

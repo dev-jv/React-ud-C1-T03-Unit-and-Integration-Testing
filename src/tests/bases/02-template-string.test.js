@@ -8,14 +8,14 @@ describe('Pruebas en 02-template-string.js', () => {
         const saludo = getSaludo(nombre);
         console.log(saludo);
         expect(saludo).toBe('Bienvenido ' + nombre + '!');
-    })
+    });
 
     test('Test 2: getSaludo, con parámetros por defecto ', (nombre = 'Nero') => {
         const saludo = getSaludo();
         console.log(saludo);
         expect(saludo).toBe('Bienvenido ' + nombre + '!');
     })
-})
+});
 
 
 

@@ -47,10 +47,10 @@ const persona2 = { // Objetos anidados
 console.log(persona2); // Luis..
 
 const persona25 = persona2;
-persona25.nombre = 'Peter' 
+persona25.nombre = 'Peter';
 
 console.log(persona2); // Peter.. !!
-console.log(persona25) // Peter..
+console.log(persona25); // Peter..
 
 // ---------------------- (2) Creamos un nuevo objeto con las keys/values copiadas
 const persona26 = { 
@@ -58,12 +58,12 @@ const persona26 = {
     apellidos: 'Shankland',
     edad: '45',
 }; 
-persona26.nombre = 'Sam' 
+persona26.nombre = 'Sam';
 console.log(persona26);
 
 // ---------------------- (3) Clonando contenido con spread operator
-const persona27 = {...persona} 
-persona27.nombre = 'Tom'
+const persona27 = {...persona};
+persona27.nombre = 'Tom';
 console.log(persona27);
 // ----------------------
 
