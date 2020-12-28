@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PrimeraApp = ({ color = 'Yellow', especie }) => {
-    
-    return (
-        <>  
-            <h1> { color } </h1>
-            <p> { especie } </p>
-        </>
-    );
+const PrimeraApp = ({ color, especie }) => {
+
+        return (
+            <>
+                <h1> { color } </h1>
+                <p> { especie } </p>
+            </>
+        );
 };
 
-PrimeraApp.propTypes = { 
+PrimeraApp.propTypes = {
     color : PropTypes.string.isRequired,
 };
 
