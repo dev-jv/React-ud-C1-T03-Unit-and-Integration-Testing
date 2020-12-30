@@ -18,8 +18,7 @@
 //
 // ReactDOM.render(<CounterApp value = {0} />, divRoot);
 
-
-//---------------------------------------- <> Test in cmpts
+// //---------------------------------------- <> Test in cmpts
 import React from 'react';
 // import CounterApp from './CounterApp';
 import PrimeraApp from './PrimeraApp';

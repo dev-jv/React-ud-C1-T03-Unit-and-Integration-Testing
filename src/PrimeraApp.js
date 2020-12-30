@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const PrimeraApp = ({ color, especie }) => {
-
         return (
             <>
                 <h1> { color } </h1>
