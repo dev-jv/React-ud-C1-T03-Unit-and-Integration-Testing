@@ -3,14 +3,10 @@
 exports[`Pruebas en <PrimeraApp /> Debe mostrar <PrimeraApp/> correctamente 1`] = `
 <Fragment>
   <h1>
-     
     Red
-     
   </h1>
   <p>
-     
     Kaede
-     
   </p>
 </Fragment>
 `;

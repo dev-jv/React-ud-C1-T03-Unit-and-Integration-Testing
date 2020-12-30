@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const PrimeraApp = ({ color, especie }) => {
         return (
             <>
-                <h1> { color } </h1>
-                <p> { especie } </p>
+                <h1>{ color }</h1>
+                <p>{ especie }</p>
             </>
         );
 };

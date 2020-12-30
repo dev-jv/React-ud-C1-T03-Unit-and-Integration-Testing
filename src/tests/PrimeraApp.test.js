@@ -21,6 +21,19 @@ describe('Pruebas en <PrimeraApp />', () => {
         const color = 'Red';
         const wrapper = shallow( <PrimeraApp color={ color }/> );
         expect( wrapper ).toMatchSnapshot();
+    });
+
+    test('Debe mostrar la especie enviada por props', () => {
+        const color = 'Red';
+        const especie = 'Miyasama Kaede';
+        const wrapper = shallow(
+            <PrimeraApp
+                color={ color }
+                especie={ especie }
+            />
+        );
+        const txtPar = wrapper.find('p').text();
+        expect(txtPar).toBe('Miyasama Kaede')
     })
 });
 
