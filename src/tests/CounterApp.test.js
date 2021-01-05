@@ -6,10 +6,10 @@ import '../setupTests'
 
 describe('Pruebas en <CounterApp />', () => {
 
-    let wrapper = shallow(<CounterApp />);
-
+    let wrapper = shallow(<CounterApp />); // Declara para todos los test, el wrapper puede ser modificado conforme avanzen los tests
+    // Se le inicializa para no perder el intellisense
     beforeEach( () => {
-        wrapper = shallow(<CounterApp />);
+        wrapper = shallow(<CounterApp />); // El mismo wrapper para cada test
     });
 
     test('Debe de mostrar <CounterApp /> correctamente', () => {
@@ -32,9 +32,23 @@ describe('Pruebas en <CounterApp />', () => {
     test('Debe reducir con el boton -1', () => {
         wrapper.find('button').at(2).simulate('click');
         const txt = wrapper.find('h2').text().trim();
-        console.log(txt);
+        // console.log(txt);
         expect(txt).toBe('-1');
     });
+
+    test('debe colocar el valor por defecto con el btn reset', () => {
+        const value = 0;
+        const wrapper = shallow(<CounterApp value={ value }/>);
+
+        wrapper.find('button').at(0).simulate('click');
+        wrapper.find('button').at(2).simulate('click');
+        wrapper.find('button').at(2).simulate('click');
+        wrapper.find('button').at(1).simulate('click');
+
+        const res = wrapper.find('h2').text().trim();
+        // console.log(res);
+        expect(res).toBe('0')
+    })
 });
 
 
