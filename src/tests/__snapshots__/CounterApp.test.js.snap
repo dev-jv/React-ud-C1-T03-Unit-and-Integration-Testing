@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en <CounterApp /> Debe de mostrar <CounterApp /> correctamente 1`] = `
+exports[`[37m[44m/> Testing in <CounterApp />[49m[39m Test 1: Should show <CounterApp /> correctly 1`] = `
 <Fragment>
   <h1>
      CounterApp 
@@ -9,19 +9,22 @@ exports[`Pruebas en <CounterApp /> Debe de mostrar <CounterApp /> correctamente 
     0
   </h2>
   <button
+    id="hAdd"
     onClick={[Function]}
   >
-    +1
+     +1 
   </button>
   <button
+    id="hReset"
     onClick={[Function]}
   >
-    Reset
+     Reset 
   </button>
   <button
+    id="hSubtract"
     onClick={[Function]}
   >
-    -1
+     -1 
   </button>
 </Fragment>
 `;

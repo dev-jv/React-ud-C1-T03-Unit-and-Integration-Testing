@@ -1,47 +1,43 @@
 // ------------------------------------ <> Arrays
 
-// -------------------------------- 100 elementos
-// const arreglo = new Array(100); 
-// console.log(arreglo);
+// -------------------------------- 100 elements
+// const ary = new Array(100);
+// console.log(ary);
 
-// -------------------- Push ..modifica el objeto principal
-// const arreglo = [];
-// arreglo.push(1)
-// arreglo.push(2)
-// arreglo.push(3)
-// arreglo.push(4)
+// -------------------- Push ..modifies the main object
+// const ary = [];
+// ary.push(1)
+// ary.push(2)
+// ary.push(3)
+// ary.push(4)
 
-// ----------------------------- Es mejor!
-// const arreglo = [1, 2, 3, 4];
-// console.log(arreglo);
+// ----------------------------- is better!
+// const ary = [1, 2, 3, 4];
+// console.log(ary);
 
-// --------------------------- Asignando...
-const arreglo = [1, 2, 3, 4];
-console.log(arreglo);
+// --------------------------- Assigning...
+const ary = [1, 2, 3, 4];
+console.log(ary);
 
-let arreglo2 = arreglo;
-arreglo2.push(5);
+let ary2 = ary;
+ary2.push(5);
 
-console.log(arreglo);
-console.log(arreglo2);
+console.log(ary);
+console.log(ary2);
 
 // --------------------------- Spread Operator
-const arreglo3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(arreglo3);
+const ary3 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(ary3);
 
-const arreglo4 = [...arreglo3, 10];
+const ary4 = [...ary3, 10];
 
-console.log(arreglo3);
-console.log(arreglo4);
+console.log(ary3);
+console.log(ary4);
 
 // ---------------------- Map
-
-const arreglo5 = arreglo4.map( function(x) {
+const ary5 = ary4.map( function(x) {
     return x*2;
 });
 
-console.log(arreglo4);
-console.log(arreglo5);
-
-
-
+console.log(ary4);
+console.log(ary5);

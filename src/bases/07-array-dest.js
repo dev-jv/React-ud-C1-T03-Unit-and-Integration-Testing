@@ -1,43 +1,38 @@
 // -------------------------------------------- Array Destructuring 
+// const character = ['Trubel', 'Nick', 'Monroe'];
 
-// const personaje = ['Trubel', 'Nick', 'Monroe']
+// console.log( character[0] );
+// console.log( character[1] );
+// console.log( character[2] );
 
-// console.log( personaje[0] ); 
-// console.log( personaje[1] ); 
-// console.log( personaje[2] ); 
+// ------------------------------------
+// const characters = ['Trubel', 'Nick', 'Monroe'];
 
-// // ------------------------------------
-// const personajes = ['Trubel', 'Nick', 'Monroe'] 
-
-// const [ ,,k ] = personajes;
+// const [ ,,k ] = characters;
 // console.log( k );
 
-// // ------------------------------------
-
-export const retornarArreglo = () => {
+// ------------------------------------
+export const returnArray = () => {
     return ['ABC', 123];
 };
 
-// const [ p, q ] = retornarArreglo();
-// console.log( p, q )
+// const [ p, q ] = returnArray();
+// console.log( p, q );
 
-// // ------------------------------------
-// const usState = (valor) => {
-//     return [ valor, () => { console.log('Grimm'); }]
-// }
+// ------------------------------------
+// const useState = (value) => {
+//     return [ value, () => { console.log('Grimm'); }]
+// };
 
-// const arr = usState('Trubel');
+// const arr = useState('Trubel');
 // console.log(arr);
 // arr[1]();
 
-// // ------------------------------------
-// const usState2 = (valor) => {
-//     return [ valor, () => { console.log('Grimm'); }]
-// }
+// ------------------------------------
+// const useState2 = (value) => {
+//     return [ value, () => { console.log('Grimm'); }]
+// };
 
-// const [nombre , setNombre] = usState2('Trubel');
-// console.log(nombre);
-// setNombre();
-
-
-
+// const [name , setName] = useState2('Trubel');
+// console.log(name);
+// setName();

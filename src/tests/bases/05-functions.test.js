@@ -1,27 +1,27 @@
 import '@testing-library/jest-dom'
-import { getUser, getUsuarioActivo } from '../../bases/05-functions'
+import { getUser, getActiveUser } from '../../../src/bases/05-functions'
+import colors from 'colors';
 
-describe('Pruebas en 05-functions.js', () => {
-    test('Test 1: getUser debe retornar un objeto', () => {
-        const userTest = {
+describe('/> Tests in 05-functions.js'.bgBlue.white, () => {
+
+    test('Test 1: getUser should return an object', () => {
+        const userExp = {
             uid: 'Drak01',
             password: 'Godzi01'
         };
         const user = getUser();
         console.log(user);
-        expect(user).toEqual(userTest);
+        expect(user).toEqual(userExp);
     });
 
-    test('Test 2: getUsuarioActivo debe retornar un objeto, con un parámetro como elemento ', () => {
-        const n = 'Deei0';
-        const usNameTest = {
+    test('Test 2: getActiveUser should return an object, with a parameter such as element', () => {
+        const id = 'Deei0';
+        const userExp = {
             uid: 'ABC567',
-            username: n,
+            username: id,
         };
-        const usName = getUsuarioActivo(n);
-        expect(usName).toEqual(usNameTest);
-    })
+        const userAct = getActiveUser(id);
+        expect(userAct).toEqual(userExp);
+    });
+
 });
-
-
-

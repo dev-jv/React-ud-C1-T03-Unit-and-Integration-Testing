@@ -3,40 +3,41 @@ import '@testing-library/jest-dom/extend-expect'
 import CounterApp from "../CounterApp";
 import { shallow } from 'enzyme';
 import '../setupTests'
+import colors from 'colors';
 
-describe('Pruebas en <CounterApp />', () => {
+describe('/> Testing in <CounterApp />'.bgBlue.white, () => {
 
-    let wrapper = shallow(<CounterApp />); // Declara para todos los test, el wrapper puede ser modificado conforme avanzen los tests
-    // Se le inicializa para no perder el intellisense
+    let wrapper = shallow(<CounterApp />); // Declared for all tests, wrapper can be modified as tests progress
+    // It is initialized so as not to lose the intellisense
     beforeEach( () => {
-        wrapper = shallow(<CounterApp />); // El mismo wrapper para cada test
+        wrapper = shallow(<CounterApp />); // The same wrapper for each test
     });
 
-    test('Debe de mostrar <CounterApp /> correctamente', () => {
+    test('Test 1: Should show <CounterApp /> correctly', () => {
         expect(wrapper).toMatchSnapshot();
     });
 
-    test('Debe mostrar el valor pasado', () => {
+    test('Test 2: Should show the past value', () => {
         const value = 100;
         const wrapper = shallow(<CounterApp value={ value }/>);
         const num = wrapper.find('h2').text().trim();
         expect(parseInt(num)).toBe(100);
     });
 
-    test('Debe incrementar con el boton +1', () => {
-        wrapper.find('button').at(0).simulate('click');
+    test('Test 3: Should increment with the +1 button', () => {
+        wrapper.find('button').at(0).simulate('click'); // simulate(click, {...});
         const txt = wrapper.find('h2').text().trim();
         expect(txt).toBe('1')
     });
 
-    test('Debe reducir con el boton -1', () => {
+    test('Test 4: Should decrement with the -1 button', () => {
         wrapper.find('button').at(2).simulate('click');
         const txt = wrapper.find('h2').text().trim();
         // console.log(txt);
         expect(txt).toBe('-1');
     });
 
-    test('debe colocar el valor por defecto con el btn reset', () => {
+    test('Test 5: Should set the default value with the reset btn', () => {
         const value = 0;
         const wrapper = shallow(<CounterApp value={ value }/>);
 
@@ -49,7 +50,5 @@ describe('Pruebas en <CounterApp />', () => {
         // console.log(res);
         expect(res).toBe('0')
     })
+
 });
-
-
-

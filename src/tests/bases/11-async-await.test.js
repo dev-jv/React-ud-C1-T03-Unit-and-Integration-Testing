@@ -1,13 +1,13 @@
 import '@testing-library/jest-dom';
-import {getImagen} from "../../bases/11-async-await";
+import {getImage} from '../../../src/bases/11-async-await';
+import colors from 'colors';
 
-describe('Pruebas con async-await y fetch', () => {
-    test('Debe retornar el url de la imagen', async () => {
-        const url = await getImagen();
-        // console.log(url);
+describe('/> Tests with async-await and fetch'.bgBlue.white, () => {
+
+    test('Test 1: Should return the url of the image', async () => {
+        const url = await getImage();
+        console.log(url);
         expect(url.includes('https://')).toBe(true);
     })
+
 });
-
-
-

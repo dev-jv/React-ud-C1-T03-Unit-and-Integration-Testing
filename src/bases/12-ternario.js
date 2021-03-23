@@ -1,19 +1,16 @@
 // ------------------- <> Op. Ternario
-const activo = true;
+const active = true;
 
-// let mensaje = '';
+// let message = '';
 
-// if ( !activo ) {
-//     mensaje = 'Activo';
+// if ( !active ) {
+//     message = 'Active';
 // } else {
-//     mensaje = 'Inactivo';
+//     message = 'Inactive';
 // }
 
-// const mensaje = ( !activo ) ? 'Activo' : 'Inactivo'; 
-// const mensaje = ( activo ) ? 'Activo' : null; 
-const mensaje = activo && 'Activo';
+// const message = ( !active ) ? 'Active' : 'Inactive';
+// const message = ( active ) ? 'Active' : null;
+const message = active && 'Active';
 
-console.log(mensaje);
-
-
-
+console.log(message);

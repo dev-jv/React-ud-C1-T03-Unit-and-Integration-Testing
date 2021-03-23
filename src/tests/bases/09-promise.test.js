@@ -1,26 +1,25 @@
-import {getHeroeByIdAsync} from '../../bases/09-promise';
-import heroes from '../../data/heroes';
+import {getHeroByIdAsync} from '../../../src/bases/09-promise';
+import heroes from '../../../src/data/heroes';
+import colors from 'colors';
 
-describe('Pruebas con Promesas', () => {
-    test('getheroeByIdAsync debe retornar un Héroe async', (done) => {
+describe('/> Tests with promises'.bgBlue.white, () => {
+
+    test('Test 1: getheroeByIdAsync should return a Hero async', (done) => {
          const id = 1;
-         getHeroeByIdAsync(id)
-            .then(  heroe => {
-                expect(heroe).toBe(heroes[0]);
+         getHeroByIdAsync(id)
+            .then(hero => {
+                expect(hero).toBe(heroes[0]);
                 done();
             });
-        
     });
-    test('Debe de obtener un error si el heroe no existe', (done) => {
+
+    test('Test 2: Should get an error if the Hero does not exist.', (done) => {
         const id = 6;
-        getHeroeByIdAsync(id)
+        getHeroByIdAsync(id)
             .catch(error => {
-                expect(error).toBe('No se pudo encontrar el héroe!!!');
+                expect(error).toBe('The hero could not be found!!!');
                 done();
             })
     });
-    
+
 });
-
-
-

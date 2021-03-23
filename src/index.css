@@ -1,16 +1,37 @@
 html, body {
-    color: white;
-    background-color: teal;
+    color: crimson;
+    background-color: #21232A;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     padding: 10px;
 }
 
-button {
-    font-size: 1.2rem;
-    margin-right: 5px;
-    padding:  5px;
+.container {
+    display: grid;
+    justify-content: center;
 }
 
+h2 {
+    padding-left: 90px;
+}
 
+#hAdd {
+    padding-left: 9px;
+    padding-right: 9px;
+}
 
+#hReset {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#hSubtract {
+    padding-left: 9px;
+    padding-right: 9px;
+}
+
+button {
+    font-size: 1.1rem;
+    margin-right: 5px;
+    padding:  7px;
+}

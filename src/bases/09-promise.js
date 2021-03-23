@@ -1,93 +1,90 @@
-import { heroes } from '../data/heroes'
+import heroes from '../../src/data/heroes';
 
-const getHeroeById = (id) => {
-    return heroes.find(heroe => heroe.id === id);
+const getHeroById = (id) => {
+    return heroes.find(hero => hero.id === id);
 };
 
 // <> -------------------------------------------------- Promise .then
-// const promesa = new Promise( (resolve, reject) => {
+// const xPromise = new Promise( (resolve, reject) => {
 //     setTimeout( () => {
 //         resolve();
 //     }, 2000)
-// })
-
-// promesa.then( () => {
-//     console.log('Then de la promesa');
-// })
+// });
+//
+// xPromise.then( () => {
+//     console.log('Then by promise');
+// });
 
 // <> -------------------------------------------------- Promise .catch
-// const promesa = new Promise( (resolve, reject) => {
+// const xPromise = new Promise( (resolve, reject) => {
 //     setTimeout( () => {
-//         // console.log('2 segundos después');
-//         const heroe = getHeroeById(2);
-//         console.log(heroe);
-//         // resolve(heroe)        
-//         reject(heroe);
+//         // console.log('2 seconds after);
+//         const hero = getHeroById(2);
+//         console.log(hero);
+//         resolve(hero)
+//         reject('Not found');
 //     }, 2000)
-// })
+// });
+//
+// xPromise.then( (res) => {
+//     console.log(`Our hero is ${res.name}`);
+// }).catch(err => console.error(err));
 
-// promesa.then( (resultado) => {
-//     console.log(`Nuestro heroe es ${resultado.name}`);
-// }).catch(err => console.error(err))
+// <> ----------------------------------------------------- Promise ...Forms
 
- // <> ----------------------------------------------------- Promise ...Forms
-
- // <> (Forma 1)
-//  const getHeroeByIdAsync = (x) => {
-//     const promesa = new Promise( (resolve, reject) => {
+// <> (Form 1)
+//  const getHeroByIdAsync = (x) => {
+//     const xPromise = new Promise( (resolve, reject) => {
 //         setTimeout( () => {
-//             // console.log('2 segundos después');
-//             const heroe = getHeroeById(x);
-//             // console.log(heroe);
-//             // resolve(heroe)        
-//             resolve(heroe);
+//             // console.log('2 seconds after');
+//             const hero = getHeroById(x);
+//             // console.log(hero);
+//             // resolve(hero);
+//             resolve(hero);
 //         }, 2000)
-//     })
+//     });
+//     return xPromise;
+//  };
+//
+// getHeroByIdAsync(3).then(res => console.log(`Our hero is ${ res.name }`));
 
-//     return promesa;
-//  }
-
-// getHeroeByIdAsync(3).then(res => console.log(`Nuestro heroe es ${ res.name }`))
-
-// <> (Forma 2)
-// const getHeroeByIdAsync = (x) => {
+// <> (Form 2)
+// const getHeroByIdAsync = (x) => {
 //     return new Promise( (resolve, reject) => {
 //         setTimeout( () => {
-//             const heroe = getHeroeById(x);     
-//             resolve(heroe);
+//             const hero = getHeroById(x);
+//             resolve(hero);
 //         }, 2000)
 //     })
-// }
+// };
+//
+// getHeroByIdAsync(2).then(res => console.log(`Our hero is ${ res.name }`));
 
-// getHeroeByIdAsync(2).then(res => console.log(`Nuestro heroe es ${ res.name }`))
-
-// <> (Forma 3)
-// const getHeroeByIdAsync = (x) => new Promise( (resolve, reject) => {
+// <> (Form 3)
+// const getHeroByIdAsync = (x) => new Promise( (resolve, reject) => {
 //     setTimeout( () => {
-//         const heroe = getHeroeById(x);  
-//         resolve(heroe);
+//         const hero = getHeroById(x);
+//         resolve(hero);
 //     }, 2000)
-// })
+// });
+//
+// getHeroByIdAsync(2).then(res => console.log(`Our hero is ${ res.name }`));
 
-// getHeroeByIdAsync(2).then(res => console.log(`Nuestro heroe es ${ res.name }`))
-
- // <> ----------------------------------------------------- .then .catch
-export const getHeroeByIdAsync = (x) => {
+// <> ----------------------------------------------------- .then .catch
+export const getHeroByIdAsync = (x) => {
     return new Promise( (resolve, reject) => {
         setTimeout( () => {
-            const heroe = getHeroeById(x);   
-            if(heroe) {
-                resolve(heroe)
+            const hero = getHeroById(x);
+            if(hero) {
+                resolve(hero)
             } else {
-                reject('No se pudo encontrar el héroe!!!')
+                // reject('There was a error')
+                reject('The hero could not be found!!!')
             }
-        }, 2000)
+        }, 250);
     })
 };
 
-    // getHeroeByIdAsync(1)
-    //     .then(console.log)
-    //     .catch(console.warn)
-
-
-
+// getHeroByIdAsync(1)
+//     .then(console.log)
+//     .catch(console.warn);

@@ -1,22 +1,22 @@
 // ----------------------------- <> Functions
 
 // ----------------------- 
-// function saludar(x) {
-//     return `Hola ${x}`;
+// function greeting(x) {
+//     return `Hi ${x}`;
 // }
-// saludar = 30;
-// // console.log(saludar('Sam'));
-// console.log(saludar);
+// greeting = 30;
+// // console.log(greeting('Sam'));
+// console.log(greeting);
 
 // ------
-// const saludar = function(x) {
-//     return `Hola ${x}`;
-// }
-// console.log(saludar('Sam'));
+// const greeting = function(x) {
+//     return `Hi ${x}`;
+// };
+// console.log(greeting('Sam'));
 
 // ------
-// const saludar2 = (x) => `Hola ${x}`;
-// console.log(saludar2('Dean'));
+// const greeting2 = (x) => `Hi ${x}`;
+// console.log(greeting2('Dean'));
 
 // ------
 export const getUser = () => ({ // ({..})
@@ -27,14 +27,11 @@ export const getUser = () => ({ // ({..})
 // const user = getUser();
 // console.log(user);
 
-// ------ 
-export const getUsuarioActivo = nombre => ({
-        uid: 'ABC567',
-        username: nombre,
+// ------
+export const getActiveUser = name => ({
+    uid: 'ABC567',
+    username: name,
 });
 
-// const usuarioActivo = getUsuarioActivo('Castiel');
-// console.log(usuarioActivo);
-
-
-
+// const activeUser = getActiveUser('Castiel');
+// console.log(activeUser);

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en <PrimeraApp /> Debe mostrar <PrimeraApp/> correctamente 1`] = `
+exports[`[37m[44m/> Testing in <FirstApp />[49m[39m Test 1: Should show <FirstApp/> correctly 1`] = `
 <Fragment>
   <h1>
     Red

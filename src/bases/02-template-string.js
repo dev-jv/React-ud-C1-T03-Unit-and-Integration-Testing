@@ -1,28 +1,31 @@
 // --------------------------- <> Template String > Bactick/Back Quote
 
-// const nombre = 'Harry';
-// const apellido = 'Potter';
+const name = 'Harry';
+const lastName = 'Potter';
 
-// const nS = nombre + ' ' + apellido;
+// const nS = name + ' ' + lastName;
 // console.log(nS);
 
-// const nC = `${nombre} ${apellido}`;
+const nC = `${name} ${lastName}`;
 // console.log(nC);
 
-// const nombreCompleto = `
-// ${nombre} 
-// ${apellido} 
+// const fullName = `
+// ${name}
+// ${lastName}
 // ${1+1}`
 // ;
-// console.log(nombreCompleto);
+// console.log(fullName);
 
-export function getSaludo(ka = 'Nero') {
-    return 'Bienvenido ' + ka + '!';
+// export function getGreeting(ka) {
+//     // return 'Hi, I´m ' + ka;
+//     return 'Hi, I´m ' + ka + '!';
+// }
+
+export function getGreeting(k = 'Nero') {
+    // return 'Hi, I´m ' + ka;
+    return 'Hi, I´m ' + k + '!';
 }
 
-// console.log(`Este es un texto: ${getSaludo(nombre)}`);
+// console.log(`Expression: ${getGreeting(name)}`);
 
-// console.log(`Este es un texto: ${getSaludo(nC)}`);
-
-
-
+// console.log(`Expression: ${getGreeting(nC)}`);

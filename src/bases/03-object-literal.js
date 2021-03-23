@@ -1,71 +1,65 @@
 // ----------------------------------- <> Object literal
-const persona = { // Object literal
-    nombre: 'Jhon',
-    apellidos: 'Shankland',
-    edad: '45',
+const person = { // Object literal
+    name: 'Jhon',
+    lastName: 'Shankland',
+    age: '45',
 };
 
-console.log(persona); // Objeto
+console.log(person); // Object
 
-console.log(persona.nombre); // Value
+console.log(person.name); // Value
 
-console.table(persona); // Tabla de keys
+console.table(person); // Key table
 
 // ----------------------
-
-console.log( { // Definiendo objeto
-    objeto1: persona
+console.log( { // Defining object
+    object1: person
 } );
 
-console.log( { // Iguales
-    persona: persona
+console.log( { // Equals
+    person: person
 } );
 
-console.log( { // Simplificando
-    persona
+console.log( { // Simplifying
+    person
 } );
 
-console.table( { // Tabla de objetos
-    persona
+console.table( { // Object table
+    person
 } );
 
-// ---------------------------------------- Reutilizando Objetos
-
-const persona2 = { // Objetos anidados
-    nombre: 'Luis',
-    apellidos: 'Sanz',
-    edad: '20',
+// ----------------------------------------  Reusing Objects
+const person2 = { // Nested objects
+    name: 'Luis',
+    lastName: 'Sanz',
+    age: '20',
     direccion: {
-        ciudad: 'New York',
+        city: 'New York',
         zip: 54656,
         lat: 45.12233,
         lng: 34.46546,
     }
 };
 
-// ---------------------- (1) Asignando un objeto a otro, ...copiamos la referencia al espacio de memoria!
-console.log(persona2); // Luis..
+// ---------------------- (1) By assigning one object to another, ...we copy the reference to the memory space!
+console.log(person2); // Luis..
 
-const persona25 = persona2;
-persona25.nombre = 'Peter';
+const person25 = person2;
+person25.name = 'Peter';
 
-console.log(persona2); // Peter.. !!
-console.log(persona25); // Peter..
+console.log(person2); // Peter.. !!
+console.log(person25); // Peter..
 
-// ---------------------- (2) Creamos un nuevo objeto con las keys/values copiadas
-const persona26 = { 
-    nombre: 'Jhon',
-    apellidos: 'Shankland',
-    edad: '45',
-}; 
-persona26.nombre = 'Sam';
-console.log(persona26);
+// ---------------------- (2)  Create a new object with the copied keys/values
+const person26 = {
+    name: 'Jhon',
+    lastName: 'Shankland',
+    age: '45',
+};
+person26.name = 'Sam';
+console.log(person26);
 
-// ---------------------- (3) Clonando contenido con spread operator
-const persona27 = {...persona};
-persona27.nombre = 'Tom';
-console.log(persona27);
-// ----------------------
-
-
-
+// ---------------------- (3) Cloning content with spread operator
+const person27 = {...person};
+person27.name = 'Tom';
+console.log(person27);

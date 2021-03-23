@@ -1,34 +1,36 @@
-import { getByIdH, getByOwnDC, getByOwnM } from '../../bases/08-exp-imp-func';
+import { getByIdH, getByOwnDC, getByOwnM } from '../../../src/bases/08-exp-imp-func';
+import heroes from '../../../src/data/heroes';
+import colors from 'colors';
 
-import heroes from '../../data/heroes';
+describe('/> Testing in Heroes functions'.bgBlue.white, () => {
 
-describe('Pruebas en funciones de Héroes', () => {
-    test('Debe de retornar un heroe por id', () => {
+    test('Test 1: Should return a hero by id', () => {
         const id = 5;
-        const heroId = getByIdH(id)
-        const heroIdTest = heroes.find(heroe => heroe.id === id)
-        expect(heroId).toEqual(heroIdTest);
+        const hero = getByIdH(id);
+        const heroExp = heroes.find(heroe => heroe.id === id);
+        expect(hero).toEqual(heroExp);
     });
-    test('Debe retornar undefined si el heroe no existe', () => {
+
+    test('Test 2: Should return undefined if the hero does not exist.', () => {
         const id = 6;
-        const heroId = getByIdH(id)
-        expect(heroId).toBe(undefined);
+        const hero = getByIdH(id);
+        expect(hero).toBe(undefined);
     });
-    test('Debe retornar un array con los heroes de DC', () => {
+
+    test('Test 3: Should return an array of DC heroes', () => {
         const owner = 'DC';
-        const heroDC = getByOwnDC(owner);
-        // console.log(heroDC);
-        const heroDCTest = heroes.filter(heroe => heroe.owner === owner);
-        // console.log(heroDCTest);
-        expect(heroDC).toEqual(heroDCTest);
+        const hero = getByOwnDC(owner);
+        // console.log(hero);
+        const heroExp = heroes.filter(heroe => heroe.owner === owner);
+        // console.log(heroExp);
+        expect(hero).toEqual(heroExp);
     });
-    test('Debe retornar un array con los heroes de Marvel', () => {
-        const owner = 'Marvel'; 
-        const heroMar = getByOwnM(owner).length;
-        // console.log(heroMar);
-        expect(heroMar).toBe(2);
+
+    test('Test 4: Should return an array with Marvel heroes', () => {
+        const owner = 'Marvel';
+        const kHeroes = getByOwnM(owner).length;
+        // console.log(kHeroes);
+        expect(kHeroes).toBe(2);
     })
+
 });
-
-
-

@@ -22,9 +22,9 @@ const CounterApp = ({value = 0}) => {
         <>
             <h1> CounterApp </h1>
             <h2>{ counter }</h2>
-            <button onClick={ handleAdd }>+1</button>
-            <button onClick={ handleReset }>Reset</button>
-            <button onClick={ handleSubtract }>-1</button>
+            <button id="hAdd" onClick={ handleAdd }> +1 </button>
+            <button id="hReset" onClick={ handleReset }> Reset </button>
+            <button id="hSubtract" onClick={ handleSubtract }> -1 </button>
         </>
     );
 };
@@ -35,6 +35,3 @@ CounterApp.propTypes = {
 };
 
 export default CounterApp;
-
-
-
